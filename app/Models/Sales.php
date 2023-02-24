@@ -11,6 +11,8 @@ class Sales extends Model
         'userName',
         'productName',
         'history',
+        'total',
+
     ];
     use HasFactory;
 }

@@ -2837,7 +2837,9 @@ progress {
   font-size: 0.875rem;
   border-radius: 0.5rem;
 }
-
+#total{
+  width: 280px;
+}
 .form-control-lg::file-selector-button {
   padding: 0.75rem 0.75rem;
   margin: -0.75rem -0.75rem;

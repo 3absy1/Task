@@ -31,14 +31,13 @@ class SalesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create(UpdateSalesRequest $request ,int $id )
+    public function create(UpdateSalesRequest $request  )
     {
-        $total=Products::where('price', $id);
         Sales::create([
             'userName'=>$request->input('userName'),
             'productName'=>$request->input('productName'),
             'history'=>$request->input('history'),
-            'total'=> $request->input('price'),
+            'total'=> $request->input('total'),
 
         ]);
         return redirect('Sales')->with('status','Created Successfully');
@@ -96,6 +95,7 @@ class SalesController extends Controller
         $edit->userName = $request->input('userName');
         $edit->productName = $request->input('productName');
         $edit->history = $request->input('history');
+        $edit->total = $request->input('total');
         $edit->update();
         return redirect('Sales')->with('status','Updated Successfully');
     }

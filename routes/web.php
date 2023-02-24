@@ -70,5 +70,4 @@ Route::put('{salesID}/update3', [SalesController::class,'update']);
 Route::get('{salesID}/delete3',[SalesController::class ,'destroy']);
 //--------create--------
 Route::get('create3',[SalesController::class ,'index']);
-Route::get('{id}/add3',[SalesController::class ,'create']);
-
+Route::get('add3',[SalesController::class ,'create']);

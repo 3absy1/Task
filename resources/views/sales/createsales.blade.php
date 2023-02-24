@@ -20,6 +20,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
     <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800'><link rel="stylesheet" href="../asset/style.css">
+
     <title>
         Task
     </title>
@@ -133,9 +135,7 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($products as $product)
-                                    <form method="GET" action="{{$product->price}}/add3">
-                                        @endforeach
+                                    <form method="GET" action="add3">
                                     @csrf
                                     <tr>
                                         <td>
@@ -162,24 +162,36 @@
                                         <td>
                                             <div class="d-flex px-2 py-1">
                                                 <div class="d-flex flex-column justify-content-center">
-                                                    <select
+                                                    <input
                                                             name="productName"
                                                             id="productName"
                                                             class="form-control form-control-lg"
+                                                                placeholder="Enter Products you want"
                                                     >
-                                                        <option>
-                                                            Choose Products
-
-                                                        </option>
-                                                        @foreach($products as $product)
-                                                            <option>
-                                                                {{$product->name}}
-                                                            </option>
-                                                        @endforeach
-                                                    </select>
                                                 </div>
                                             </div>
                                         </td>
+{{--                                        <td>--}}
+{{--                                            <div class="d-flex px-2 py-1">--}}
+{{--                                                <div class="d-flex flex-column justify-content-center">--}}
+{{--                                                    <select--}}
+{{--                                                            name="productName"--}}
+{{--                                                            id="productName"--}}
+{{--                                                            class="form-control form-control-lg"--}}
+{{--                                                    >--}}
+{{--                                                        <option>--}}
+{{--                                                            Choose Products--}}
+
+{{--                                                        </option>--}}
+{{--                                                        @foreach($products as $product)--}}
+{{--                                                            <option>--}}
+{{--                                                                {{$product->name}}--}}
+{{--                                                            </option>--}}
+{{--                                                        @endforeach--}}
+{{--                                                    </select>--}}
+{{--                                                </div>--}}
+{{--                                            </div>--}}
+{{--                                        </td>--}}
                                         <td>
                                             <div class="d-flex px-2 py-1">
                                                 <div class="d-flex flex-column justify-content-center">
@@ -192,10 +204,8 @@
                                             </div>
                                         </td>
                                         <td class="align-middle">
-                                            <button type="submit" class="btn btn-lg btn-primary btn-lg mb-0">Create</button>
                                         </td>
                                     </tr>
-                                </form>
                                 </tbody>
                             </table>
                         </div>
@@ -203,39 +213,56 @@
                 </div>
             </div>
         </div>
+        @foreach($products as $product)
 
-        <footer class="footer pt-3  ">
-            <div class="container-fluid">
-                <div class="row align-items-center justify-content-lg-between">
-                    <div class="col-lg-6 mb-lg-0 mb-4">
-                        <div class="copyright text-center text-sm text-muted text-lg-start">
-                            © <script>
-                                document.write(new Date().getFullYear())
-                            </script>,
-                            made with <i class="fa fa-heart"></i> by
-                            <a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">Creative Tim</a>
-                            for a better web.
-                        </div>
-                    </div>
-                    <div class="col-lg-6">
-                        <ul class="nav nav-footer justify-content-center justify-content-lg-end">
-                            <li class="nav-item">
-                                <a href="https://www.creative-tim.com" class="nav-link text-muted" target="_blank">Creative Tim</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://www.creative-tim.com/presentation" class="nav-link text-muted" target="_blank">About Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://www.creative-tim.com/blog" class="nav-link text-muted" target="_blank">Blog</a>
-                            </li>
-                            <li class="nav-item">
-                                <a href="https://www.creative-tim.com/license" class="nav-link pe-0 text-muted" target="_blank">License</a>
-                            </li>
-                        </ul>
-                    </div>
+            <article class="product">
+                <div class="content">
+                    <h1>{{$product->name}}</h1>
                 </div>
+                <footer class="content">
+                    <span class="qt-minus">-</span>
+                    <span class="qt">0</span>
+                    <span class="qt-plus">+</span>
+
+                    <h2 class="full-price">
+                        0.00EGP
+
+                    </h2>
+
+                    <h2 class="price">
+                        {{$product->price}}EGP
+                    </h2>
+                </footer>
+            </article>
+        @endforeach
+
+        <footer id="site-footer">
+            <div class="container clearfix">
+
+                <div class="left">
+
+                </div>
+
+                <div class="right">
+
+                    <h2  class="subtotal">Total: <span >0.00</span>EGP</h2>
+                    <input width="150px" id="total" name="total"
+                           class="form-control form-control-lg "
+                           placeholder="Enter Total  Price to Submit your Order"
+
+                    >
+
+
+                </div>
+
             </div>
         </footer>
+
+        <button type="submit" class="btn btn-lg btn-primary btn-lg mb-0">Create</button>
+
+        </form>
+
+
     </div>
 </main>
 <div class="fixed-plugin">
@@ -305,6 +332,7 @@
 <script src="../assets/js/core/bootstrap.min.js"></script>
 <script src="../assets/js/plugins/perfect-scrollbar.min.js"></script>
 <script src="../assets/js/plugins/smooth-scrollbar.min.js"></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script><script  src="../asset/script.js"></script>
 <script>
     var win = navigator.platform.indexOf('Win') > -1;
     if (win && document.querySelector('#sidenav-scrollbar')) {
