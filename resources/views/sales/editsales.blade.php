@@ -275,7 +275,7 @@
                     <h2 id="total" name="total" class="subtotal">Total: <span>0.00</span>EGP</h2>
                     <input width="150px" id="total" name="total"
                            class="form-control form-control-lg "
-                           placeholder="Enter Total  Price to Submit your Order"
+                           placeholder="Enter Total  Price to Submit "
 
                     >
                 </div>
