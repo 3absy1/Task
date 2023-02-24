@@ -171,27 +171,6 @@
                                                 </div>
                                             </div>
                                         </td>
-{{--                                        <td>--}}
-{{--                                            <div class="d-flex px-2 py-1">--}}
-{{--                                                <div class="d-flex flex-column justify-content-center">--}}
-{{--                                                    <select--}}
-{{--                                                            name="productName"--}}
-{{--                                                            id="productName"--}}
-{{--                                                            class="form-control form-control-lg"--}}
-{{--                                                    >--}}
-{{--                                                        <option>--}}
-{{--                                                            Choose Products--}}
-
-{{--                                                        </option>--}}
-{{--                                                        @foreach($products as $product)--}}
-{{--                                                            <option>--}}
-{{--                                                                {{$product->name}}--}}
-{{--                                                            </option>--}}
-{{--                                                        @endforeach--}}
-{{--                                                    </select>--}}
-{{--                                                </div>--}}
-{{--                                            </div>--}}
-{{--                                        </td>--}}
                                         <td>
                                             <div class="d-flex px-2 py-1">
                                                 <div class="d-flex flex-column justify-content-center">

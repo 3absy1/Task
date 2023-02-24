@@ -179,30 +179,6 @@
                                                 </div>
                                             </div>
                                         </td>
-
-                                        {{--                                        <td>--}}
-                                        {{--                                            <div class="d-flex px-2 py-1">--}}
-                                        {{--                                                <div class="d-flex flex-column justify-content-center">--}}
-                                        {{--                                                    --}}
-                                        {{--                                                    --}}
-                                        {{--                                                </div>--}}
-                                        {{--                                            </div>--}}
-                                        {{--                                            --}}
-                                        {{--                                        </td>--}}
-
-
-                                        {{--                                        @foreach($products as $product)--}}
-                                        {{--                                        <td>--}}
-                                        {{--                                            <div class="d-flex px-2 py-1">--}}
-                                        {{--                                                <div class="d-flex flex-column justify-content-center">--}}
-                                        {{--                                                    <input--}}
-                                        {{--                                                            class="form-control form-control-lg"--}}
-                                        {{--                                                                placeholder="enter count"--}}
-                                        {{--                                                    >--}}
-                                        {{--                                                </div>--}}
-                                        {{--                                            </div>--}}
-                                        {{--                                        </td>--}}
-                                        {{--                                        @endforeach--}}
                                         <td>
                                             <div class="d-flex px-2 py-1">
                                                 <div class="d-flex flex-column justify-content-center">
