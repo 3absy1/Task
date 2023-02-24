@@ -115,6 +115,9 @@
     </nav>
     <!-- End Navbar -->
     <div class="container-fluid py-4">
+        <form method="POST" action="update3" >
+            @csrf
+            @method('PUT')
         <div class="row">
             <div class="col-12">
                 <div class="card mb-4">
@@ -138,9 +141,7 @@
                                     <th class="text-secondary opacity-7"></th>
                                 </tr>
                                 </thead>
-                                <form method="POST" action="update3" >
-                                    @csrf
-                                    @method('PUT')
+
                                     <tr>
                                         <td>
                                             <div class="d-flex px-2 py-1">

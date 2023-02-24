@@ -114,6 +114,8 @@
     </nav>
     <!-- End Navbar -->
     <div class="container-fluid py-4">
+        <form method="GET" action="add3">
+            @csrf
         <div class="row">
             <div class="col-12">
                 <div class="card mb-4">
@@ -127,15 +129,14 @@
                                 <thead>
                                 <tr>
                                     <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">User Name</th>
-                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Product Name</th>
+                                    <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Products Name</th>
                                     <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">History</th>
 
 
                                     <th class="text-secondary opacity-7"></th>
                                 </tr>
                                 </thead>
-                                <form method="GET" action="add3">
-                                    @csrf
+
                                     <tr>
                                         <td>
                                             <div class="d-flex px-2 py-1">
@@ -177,6 +178,8 @@
                                                             name="history"
                                                             id="history"
                                                             class="form-control form-control-lg"
+                                                            placeholder="example:2023-2-24 "
+
                                                     >
                                                 </div>
                                             </div>
