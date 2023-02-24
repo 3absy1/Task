@@ -134,8 +134,7 @@
                                     <th class="text-secondary opacity-7"></th>
                                 </tr>
                                 </thead>
-                                <tbody>
-                                    <form method="GET" action="add3">
+                                <form method="GET" action="add3">
                                     @csrf
                                     <tr>
                                         <td>
@@ -166,7 +165,7 @@
                                                             name="productName"
                                                             id="productName"
                                                             class="form-control form-control-lg"
-                                                                placeholder="Enter Products you want"
+                                                            placeholder="example:food,drinks "
                                                     >
                                                 </div>
                                             </div>
@@ -185,7 +184,6 @@
                                         <td class="align-middle">
                                         </td>
                                     </tr>
-                                </tbody>
                             </table>
                         </div>
                     </div>
